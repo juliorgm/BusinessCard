@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listCardFragment">
+
+    <fragment
+        android:id="@+id/listCardFragment"
+        android:name="br.com.cuiadigital.businesscard.ui.ListCardFragment"
+        android:label="fragment_list_card"
+        tools:layout="@layout/fragment_list_card" >
+        <action
+            android:id="@+id/action_listCardFragment_to_formCardFragment"
+            app:destination="@id/formCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/formCardFragment"
+        android:name="br.com.cuiadigital.businesscard.ui.FormCardFragment"
+        android:label="fragment_form_card"
+        tools:layout="@layout/fragment_form_card" />
+</navigation>
