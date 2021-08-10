@@ -12,11 +12,18 @@
         tools:layout="@layout/fragment_list_card" >
         <action
             android:id="@+id/action_listCardFragment_to_formCardFragment"
-            app:destination="@id/formCardFragment" />
+            app:destination="@id/formCardFragment"
+            app:popUpTo="@id/formCardFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/formCardFragment"
         android:name="br.com.cuiadigital.businesscard.ui.FormCardFragment"
         android:label="fragment_form_card"
-        tools:layout="@layout/fragment_form_card" />
+        tools:layout="@layout/fragment_form_card" >
+        <action
+            android:id="@+id/action_formCardFragment_to_listCardFragment"
+            app:destination="@id/listCardFragment"
+            app:popUpTo="@id/listCardFragment" />
+    </fragment>
 </navigation>

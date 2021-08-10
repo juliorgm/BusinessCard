@@ -1,5 +1,10 @@
 package br.com.cuiadigital.businesscard
 
 import android.app.Application
+import br.com.cuiadigital.businesscard.data.AppDatabase
+import br.com.cuiadigital.businesscard.data.BusinessCardRepository
 
-class App : Application()
+class App : Application(){
+    val database by lazy { AppDatabase.getInstance(this) }
+    val repository by lazy { BusinessCardRepository(database.businessDao()) }
+}
